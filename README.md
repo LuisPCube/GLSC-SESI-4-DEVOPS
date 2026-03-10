@@ -8,10 +8,8 @@ A collaborative DevOps project for GSLC Session 4, demonstrating Docker containe
 
 | Name | Role |
 |------|------|
-| LuisPCube | Repo Owner |
-| Member 2 | Collaborator |
-| Member 3 | Collaborator |
-| Member 4 | Collaborator |
+| LuisArmando | Ketua Kelompok |
+| Timotius Rievaldo Paskah | Collaborator |
 
 ---
 
