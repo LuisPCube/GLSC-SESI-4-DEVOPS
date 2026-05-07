@@ -1,15 +1,55 @@
-# GLSC-SESI-4-DEVOPS
+# 🏥 RS Medicare — Web App
 
-A collaborative DevOps project for GSLC Session 4, demonstrating Docker containerization and Git collaboration workflows.
+A collaborative **DevSecOps** project for GSLC Session 4, featuring a hospital web application built with HTML/CSS/JS, containerized with Docker, and secured with a CI/CD pipeline via GitHub Actions.
 
 ---
 
 ## 👥 Team Members
 
-| Name | Role |
-|------|------|
-| LuisArmando | Ketua Kelompok |
-| Timotius Rievaldo Paskah | Collaborator |
+| Username Git | Nama Lengkap | Role |
+|---|---|---|
+| LuisPCube | LuisArmando | Ketua Kelompok |
+| *(username)* | Timotius Rievaldo Paskah | Collaborator |
+| *(username)* | Arnesto Agung Detanomez | Collaborator |
+
+---
+
+## 🌐 About the Project
+
+**RS Medicare** is a hospital web application that includes:
+- 🏠 Landing page with hospital statistics
+- 🏥 Medical services & poly information
+- 👨‍⚕️ Doctor profiles & schedules
+- 📝 Online patient registration form
+- 📍 Contact & location information
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| HTML / CSS / JS | Frontend web application |
+| Docker + Nginx | Containerization & web server |
+| GitHub Actions | CI/CD pipeline automation |
+| Gitleaks | Secret scanning security |
+| Trivy | Vulnerability scanning security |
+| Git | Version control & collaboration |
+
+---
+
+## 🔒 CI/CD Pipeline & Security
+
+Pipeline berjalan otomatis setiap **push** atau **pull request** ke branch `main`.
+
+```
+Secret Scanning → Dependency Scan + HTML Validate → Build Docker → Docker Image Scan → Summary
+```
+
+### 3 Fitur Security:
+1. **Secret Scanning** (Gitleaks) — Mendeteksi API key / password yang tidak sengaja ter-push
+2. **Dependency Vulnerability Scan** (Trivy fs) — Scan filesystem dari celah keamanan
+3. **Docker Image Security Scan** (Trivy image) — Scan Docker image sebelum dijalankan
 
 ---
 
@@ -17,13 +57,9 @@ A collaborative DevOps project for GSLC Session 4, demonstrating Docker containe
 
 ### Prerequisites
 
-Make sure you have the following installed:
+Pastikan sudah terinstall:
 - [Git](https://git-scm.com/)
 - [Docker](https://www.docker.com/get-started)
-
----
-
-## 📦 Installation
 
 ### 1. Clone the Repository
 
@@ -39,13 +75,13 @@ cd GLSC-SESI-4-DEVOPS
 ### Build the Docker Image
 
 ```bash
-docker build -t glsc-sesi4-devops .
+docker build -t rs-medicare .
 ```
 
 ### Run the Container
 
 ```bash
-docker run -d -p 8080:80 --name glsc-app glsc-sesi4-devops
+docker run -d -p 8080:80 --name rs-medicare-app rs-medicare
 ```
 
 ### Open in Browser
@@ -57,13 +93,13 @@ http://localhost:8080
 ### Stop the Container
 
 ```bash
-docker stop glsc-app
+docker stop rs-medicare-app
 ```
 
 ### Remove the Container
 
 ```bash
-docker rm glsc-app
+docker rm rs-medicare-app
 ```
 
 ---
@@ -78,8 +114,6 @@ git checkout -b feature/your-feature-name
 
 ### 2. Make Your Changes
 
-Edit the files, then stage and commit:
-
 ```bash
 git add .
 git commit -m "feat: describe your changes"
@@ -93,7 +127,7 @@ git push origin feature/your-feature-name
 
 ### 4. Create a Pull Request
 
-Go to the repository on GitHub and click **"Compare & pull request"**, fill in the description, and submit for review.
+Buka repo di GitHub dan klik **"Compare & pull request"**, isi deskripsi, lalu submit untuk review.
 
 ---
 
@@ -101,19 +135,19 @@ Go to the repository on GitHub and click **"Compare & pull request"**, fill in t
 
 ```
 GLSC-SESI-4-DEVOPS/
-├── index.html      # Main web application
-├── Dockerfile      # Docker container configuration
-└── README.md       # Project documentation
+├── index.html                        # RS Medicare web application
+├── Dockerfile                        # Docker container configuration
+├── README.md                         # Project documentation
+└── .github/
+    └── workflows/
+        └── ci-cd.yml                 # GitHub Actions CI/CD pipeline
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 📅 Deadline
 
-| Technology | Purpose |
-|------------|---------|
-| HTML/CSS/JS | Frontend web application |
-| Docker | Containerization |
-| Nginx | Web server inside container |
-| Git | Version control & collaboration |
-| GitHub | Remote repository & pull requests |
+| Tanggal | Target |
+|---|---|
+| 12 Mei 2026 | Rencana pipeline CI/CD |
+| 13 Juni 2026 | GitHub Actions pipeline komplit |
