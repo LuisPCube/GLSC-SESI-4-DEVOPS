@@ -8,7 +8,7 @@ A collaborative **DevSecOps** project for GSLC Session 4, featuring a hospital w
 
 | Username Git | Nama Lengkap | Role |
 |---|---|---|
-| LuisPCube | LuisArmando | Ketua Kelompok |
+| LuisPCube/Berly Armando | LuisArmando | Ketua Kelompok |
 | Aldoroku | Timotius Rievaldo Paskah | Collaborator |
 | Arnesto_Cyber| Arnesto Agung Detanomez | Collaborator |
 
